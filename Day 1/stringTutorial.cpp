@@ -52,15 +52,15 @@ int main()
     string sc1 = "abc";
     string sc2 = "xyz";
 
-    if (sc2.compare == 0)
+    if (sc2.compare(sc1) == 0)
     {
         cout << "EQUAL";
     }
-    if (sc2.compare > 0)
+    if (sc2.compare(sc1) > 0)
     {
         cout << "S2 IS GREATER";
     }
-    if (sc2.compare < 0)
+    if (sc2.compare(sc1) < 0)
     {
         cout << "S1 IS GREATER";
     }
