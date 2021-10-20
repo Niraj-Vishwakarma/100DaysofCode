@@ -9,6 +9,7 @@ https://www.hackerrank.com/challenges/flatland-space-stations/problem
 
 3D Surface Area :
 https://www.hackerrank.com/challenges/3d-surface-area/problem
+#trick - added extra rows and colunm around the matrix to avoid conditional loops
 
 -------
 *NEXT PERMUTATION ALGORITHM EXPLANATION : 
