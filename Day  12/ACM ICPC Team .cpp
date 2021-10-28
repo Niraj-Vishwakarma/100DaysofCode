@@ -35,3 +35,54 @@ int main() {
     cout << ans << endl << cnt << endl;
     return 0;
 }
+
+//O[n^2] using bitset
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector <string> v;
+int main() {
+    int n, m;
+    cin >> n >> m;
+    string s;
+    for (int i = 0; i < n; i++) {
+        cin >> s;
+        v.push_back(s);
+    }
+    int tmax=0;
+    int team=0;
+    
+    for(int i=0; i<n; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+    bitset<500>s1(v[i]);
+    
+    bitset<500>s2(v[j]);
+    
+    bitset<500>s3;
+    
+    
+    s3 = s1 | s2 ;
+     
+    if(s3.count() > tmax )
+    {
+        tmax = s3.count();
+        team=0;
+    }
+    
+    if(s3.count()==tmax)
+    {
+        team++;
+    }
+        }
+      
+    }
+    cout << tmax << endl << team << endl;
+    return 0;
+}
+
+
+
+
