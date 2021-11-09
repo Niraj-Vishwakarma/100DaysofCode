@@ -141,3 +141,127 @@ vector<string> bomberMan(int n, vector<string> grid) {
         }     
  return arr1;    
 }
+
+// Second approach = > does not work for( n%4 == 1 ) case
+#include <bits/stdc++.h>
+
+using namespace std;
+void printGrid(vector<string> t)
+{
+    //print
+for(int i=0; i<t.size(); i++)
+{
+    for(int j=0; j<t[0].size(); j++)
+    {
+      cout<<t[i][j];
+    }
+    cout<<"\n";
+}
+}
+
+int main()
+{
+    //inputs
+    int r,c,n;
+    cin>>r>>c>>n;
+    vector<string> g(r);
+    
+    for(int i=0; i<r; i++)
+    { 
+        string input;
+        cin>>input;
+        g[i] = input;
+    }
+    
+    if(n==1)
+    {
+        for(int i=0; i<r; i++)
+         { 
+             cout<<g[i]<<"\n";
+         }
+         return 0;
+    }
+    if(n%2==0)
+    {
+        for(int i=0; i<r; i++)
+        {
+            for(int j=0; j<c; j++)
+            {
+                cout<<char(79);
+            }
+            cout<<"\n";
+        }
+        return 0;
+    }
+//odd time
+vector<string> t(r);
+t = g;
+
+for(int i=0; i<r; i++)
+{
+    for(int j=0; j<c; j++)
+    {
+      t[i][j] = char(79);
+    }
+}
+ for(int i=0; i<r; i++)
+    {
+       for(int j=0; j<c; j++)
+       {
+           if(g[i][j] == 79)
+           {
+               t[i][j] = '.';
+             if( i-1>=0 ) 
+              t[i-1][j] = '.'; 
+              if(i+1<r)
+             t[i+1][j] = '.';
+              if(j-1>=0)
+              t[i][j-1] = '.';
+              if(j+1<r)
+              t[i][j+1] = '.';
+               
+           } 
+       }
+    }
+
+if( n%4 == 3)
+{
+   printGrid(t); 
+   return 0;    
+} 
+
+g = t;
+
+for(int i=0; i<r; i++)
+{
+    for(int j=0; j<c; j++)
+    {
+      t[i][j] = char(79);
+    }
+}
+
+ for(int i=0; i<r; i++)
+    {
+       for(int j=0; j<c; j++)
+       {
+           if(g[i][j] == 79)
+           {
+               t[i][j] = '.';
+             if( i-1>=0 ) 
+              t[i-1][j] = '.'; 
+              if(i+1<r)
+             t[i+1][j] = '.';
+              if(j-1>=0)
+              t[i][j-1] = '.';
+              if(j+1<r)
+              t[i][j+1] = '.';
+               
+           } 
+       }
+    }
+
+printGrid(t); 
+    
+    return 0;
+}
+
