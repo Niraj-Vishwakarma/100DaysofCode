@@ -80,3 +80,85 @@ int main()
     
     return 0;
 }
+//Approach second that passed all test cases
+#include <bits/stdc++.h>
+using namespace std;
+
+int alert=0;
+int check(vector<int> f, int d)
+{
+    vector<int>fc (f);
+  for(int i=1; i<201; i++)
+    fc[i] += fc[i-1];
+    
+
+    int a=0;
+    int b=0;
+    
+    if((d&1) == 1)
+    {
+        int first = d/2 +1;
+        for(int i=0; i<201;i++)
+        {
+            if(first<=fc[i])
+            {
+                a= 2*i;
+                break;
+            }
+        }
+    } else {
+    int first = d/2;
+    int sec = first+1;
+    int i=0;
+    
+        for( ; i<201; i++)
+        {
+            if(first<=fc[i])
+             {a = i;
+             break;
+             }
+        }
+         for( ; i<201; i++)
+        {
+            if(sec<=fc[i])
+             {b = i;
+             break;
+             }
+        }
+    }
+    
+     
+    return a+b;   
+    
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    //input
+    int n, d;
+    cin>>n>>d;
+    vector<int>a(n);
+    for(int i=0; i<n; i++)
+    cin>>a[i];
+    //evaluate
+    vector<int>f(201,0);
+    for(int i=0; i<d; i++)
+    {
+        f[a[i]]++; 
+    }
+    for(int i=d; i<n; i++)
+    {
+        int mediantwice = check(f, d);
+        
+        if(a[i]>=mediantwice)
+        {
+            alert++;
+        }
+        f[a[i]]++;
+        f[a[i-d]]--;
+    }
+    cout<<alert;
+    return 0;
+}
+
