@@ -13,7 +13,7 @@ Participated on Codertine competition : https://hack.codingblocks.com/app/contes
 
 ------------------------
 4. Strongest MMA fighter : find the strength of the strongest fighter in continuous sub-groups of size k.
-
+   https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
   
 Trick -> sliding window 
     
