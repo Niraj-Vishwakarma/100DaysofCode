@@ -1,3 +1,7 @@
+
+MIATAKES I COMMITED : Jumped directly to code the optimized solution / Rushed through Question while reading 
+
+---------
 ![image](https://user-images.githubusercontent.com/80817063/142727454-357f4d31-c478-4b9e-a0d7-154228b73fbf.png)
 
 
