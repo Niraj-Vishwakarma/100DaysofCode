@@ -69,34 +69,13 @@ More formally, calculate:
 
 ![image](https://user-images.githubusercontent.com/80817063/142727099-e1e4080d-7f12-40dd-ab9b-8febe0195a70.png)
 
-Input Format
 
-The first line of input contains 1 integer, the total number of parallel universes N
-
-The second line of input contains N integers, E0, E1, E2, .., En, the energy levels of the parallel universes
-
-
-Constraints
-
-2 <= N <= 105
-| Ei | <= 108
-Ei is an integer
-
-Output Format
-
-Print how many years has Jonas become younger when he finally meets Martha
-
-Sample Input 0
-
-6 
-31 41 59 26 53 27
-Sample Output 0
-
-253
+![image](https://user-images.githubusercontent.com/80817063/142727600-691d42ca-dc6b-4caa-977a-3d87cb40af32.png)
 
 
 
-So there are 6 parallel universes. To destroy the first parallel universe, jonas travels to 6th parallel universe, during travelling he becomes 114 years young since (|31-41| + |31-59| + |31-26| + |31-53| + |31-27| = 69). After stepping at 6th parallel universe he gets teleported to 2nd parallel universe since now that first parallel universe is destroyed. Now he repeats this process till all (N-1) parallel universes gets destroyed and only one universe remains, so that he can meet Martha. During the whole journey we can see that jonas becomes 253 years young.
+
+![image](https://user-images.githubusercontent.com/80817063/142727609-c81e9798-65eb-477e-a040-e2057fc4ec62.png)
 
 -------------------
 
