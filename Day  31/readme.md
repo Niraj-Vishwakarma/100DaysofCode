@@ -1,0 +1,3 @@
+- [Power of Two](https://leetcode.com/problems/power-of-two/) `leetcode`
+- [Power of Three](https://leetcode.com/problems/power-of-three/) `leetcode`
+- [Power of Four](https://leetcode.com/problems/power-of-four/) `leetcode`
