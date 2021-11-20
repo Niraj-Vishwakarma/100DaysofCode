@@ -1,3 +1,32 @@
+//TLE
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+int main() {
+    int n,s=0;
+    cin>>n;
+    int a[n+1];
+    a[0]=0;
+    for(int i=1;i<n+1; i++)
+        cin>>a[i];
+    
+   
+    for(int i=1; i<=n-1; i++)
+    {
+        for(int j=i+1; j<=n; j++)
+        {
+             s+= abs(a[i]-a[j]);
+        }
+    }
+ 
+   cout<<s;
+   
+    return 0;
+}
+
+
 //no caes passed
 #include<bits/stdc++.h>
 using namespace std;
