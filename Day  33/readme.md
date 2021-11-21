@@ -16,7 +16,7 @@ o
 void function( int r, int c )
 {
     //base condition If row is 0
-    if(r<0)
+    if(r==0)
     {
         return ;
     } 
